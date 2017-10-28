@@ -1,0 +1,17 @@
+.info-header .info-header-label-text{
+  line-height: 2.6;
+}
+
+.bottom-modal-container .reply-area{
+  padding: 20rpx;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+
+}
+.submit-content{
+  margin: 20rpx 0;
+}
+.submit-content button[type="primary"]{
+  padding-left: 120rpx;
+  padding-right: 120rpx;
+}

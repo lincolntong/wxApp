@@ -1,0 +1,149 @@
+<view class='container overflow-x-hidden'>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <block wx:if="{{!goEdit}}">
+      <view class='info-header'>
+        <text class='info-header-label-text'>基本信息</text>
+        <view class='info-header-msg pull-right'>
+          <text class='info-header-msg-label'>评分</text>
+          <text class='info-header-msg-text'>80</text>
+          <text class='info-header-msg-label'>评级</text>
+          <text class='info-header-msg-text'>B</text>
+          <text class='icon info-header-msg-icon icon-empty_star'></text>
+        </view>
+      </view>
+      <view class='info-body'>
+        <navigator url="../../company/company_detail/company_detail" class="navigator">
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>公司</text>
+            <text class='info-msg-list-text'>yeahmobi</text>
+            <view class="navigator-arrow"></view>
+          </view>
+        </navigator>
+        <view wx:for='{{contact_detail}}' class='info-msg-list'>
+          <text class='info-msg-list-label'>{{item.msg_desc}}</text>
+          <text class='info-msg-list-text'>{{item.msg_dt}}</text>
+          <text wx:if='{{item.msg_time}}' class='info-msg-list-text pull-right'>{{item.msg_time}}</text>
+        </view>
+        <view class='info-msg-list'>
+          <text class='info-msg-list-label'>电话</text>
+          <text class='info-msg-list-text'>
+            <text class='text-phone'>1323884503</text>，<text class='text-phone'>91726084</text>
+          </text>
+        </view>
+        <view class='info-msg-list'>
+          <text class='info-msg-list-label'>标签</text>
+          <view class='info-msg-list-text info-msg-list-label'>
+            <button type="default" size="mini" class="label">大客户</button>
+            <button type="default" size="mini" class="label">大客户</button>
+            <button type="default" size="mini" class="label">最近成单客户</button>
+            <button type="default" size="mini" class="label">出差中</button>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='info-header'>
+        <text class='info-header-label-text'>基本信息</text>
+        <view class='info-header-msg pull-right'>
+          <text class='icon info-header-msg-icon {{dataImportant ? "icon-star2" : "icon-empty_star"}}' bindtap="changeImp"></text>
+        </view>
+      </view>
+      <form bindsubmit="saveEdit" bindreset="cancelEdit">
+        <view class='info-body'>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>阶段</text>
+            <picker  class='info-msg-list-text' bindchange="bindPickerChange" value="{{stageIndex}}" range="{{array}}">
+              <view class="picker">
+                {{array[stageIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>职位</text>
+            <view class='info-msg-list-text'><input name="position" value="产品经理"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>邮箱</text>
+            <view class='info-msg-list-text'>
+              <input value="socialbird@qq.cn" name="mail1"/>
+              <input value="www.tend@qq.cn" name="mail2"/>
+            </view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>电话</text>
+            <view class='info-msg-list-text'>
+              <input value="13838383838" name="tel1"/>
+              <input value="13838383838" name="tel2"/>
+            </view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>国家地区</text>
+            <picker class="info-msg-list-text" name="area" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="picker">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+              </view>
+            </picker>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>类型</text>
+            <picker  class='info-msg-list-text' name="type" bindchange="bindPickerChange" value="{{stageIndex}}" range="{{array}}">
+              <view class="picker">
+                {{array[stageIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>负责人</text>
+            <view class='info-msg-list-text'>
+              <input value="小明" name="Principal"/>
+            </view>
+          </view>
+        </view>
+        <view class="submit-content">
+          <button type="default" formType="reset" class="edit-btn">放弃修改</button>
+          <button type="primary" formType="submit" class="edit-btn">保存修改</button>
+        </view>
+      </form>
+    </block>
+    <block wx:if="{{!goEdit}}">
+      <view class='info-header'>
+        <text class='info-header-label-text'>跟进备注</text>
+      </view>
+      <view class='info-body clearfix'>
+        <textarea placeholder='请输入跟进备注'></textarea>
+        <button type='default' size='mini' class='pull-right'>增加备注</button>
+      </view>
+    </block>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix' bindtap="editContact">
+            <text class="icon icon-leaf"></text>
+            <text>编辑联系人</text>
+          </view>
+          <view class='filter-list-item clearfix' bindtap="showAccessModal">
+            <text class="icon icon-maillist"></text>
+            <text>显示名片附件</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="modal-dialog access-modal" wx:if="{{showAccess}}" bindtap="hideAccessModal">
+    <view class="bg-cover"></view>
+    <view class="modal-dialog-container">
+      <view class="modal-dialog-body">
+        <image class="idCardImage"  mode="widthFix" src="{{idCardImageSrc}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+

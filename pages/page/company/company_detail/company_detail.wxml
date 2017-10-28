@@ -1,0 +1,57 @@
+<view class='container overflow-hidden'>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <view class='info-header'>
+      <text class='info-header-label-text'>基本信息</text>
+      <view class='info-header-msg pull-right'>
+        <text class='info-header-msg-label'>评分</text>
+        <text class='info-header-msg-text'>80</text>
+        <text class='info-header-msg-label'>评级</text>
+        <text class='info-header-msg-text'>B</text>
+        <text class='info-header-msg-icon icon icon-empty_star'></text>
+      </view>
+    </view>
+    <view class='info-body'>
+      <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
+        <view class='info-msg-list'>
+          <text class='info-msg-list-label'>重要联系人</text>
+          <text class='info-msg-list-text'>xiejp</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <view wx:for='{{contact_detail}}' class='info-msg-list'>
+        <text class='info-msg-list-label'>{{item.msg_desc}}</text>
+        <text class='info-msg-list-text'>{{item.msg_dt}}</text>
+        <text wx:if='{{item.msg_time}}' class='info-msg-list-text pull-right'>{{item.msg_time}}</text>
+      </view>
+    </view>
+    <view class='info-header'>
+      <text class='info-header-label-text'>其他联系人</text>
+    </view>
+    <view class='info-body clearfix'>
+      <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
+        <view class='info-msg-list info-msg-list-tb'>
+          <text class='info-msg-list-text info-msg-list-name' style="width: 30%">zengzt</text>
+          <text class='info-msg-list-text' style="width: 20%">产品经理</text>
+          <text class='info-msg-list-text pull-right' style="width: 30%">重要</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text>编辑公司</text>
+            <view class="selection pull-right">
+              <icon type="success_no_circle" color="#fff"></icon>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

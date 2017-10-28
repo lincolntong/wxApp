@@ -1,0 +1,44 @@
+<view class='container' overflow-hidden>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <view class='info-header'>
+      <text class='info-header-label-text'>xiejp的工作成果</text>
+      <view class='info-header-msg pull-right'>
+        <view class='info-header-msg-label'>2017.10.13-2017-10.29</view>
+      </view>
+    </view>
+    <view class='info-body'>
+      <view wx:for='{{teammateReport}}' class='info-msg-list'>
+        <text class='info-msg-list-label'>{{item.msg_desc}}</text>
+        <text class='info-msg-list-text pull-right'>{{item.msg_dt}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-leaf"></text>
+            <text>今日统计</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-link3"></text>
+            <text>最近7天</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-maillist"></text>
+            <text>最近30天</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-maillist"></text>
+            <text>自定义时间</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

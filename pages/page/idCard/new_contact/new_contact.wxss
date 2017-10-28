@@ -1,0 +1,13 @@
+.info-msg-list-text input{
+  display: inline-block;
+  vertical-align: middle;
+}
+.info-msg-list-text .newDatatext{
+  display: inline-block;
+  margin-right: 5rpx;
+  vertical-align: middle;
+}
+.add-btn-content{
+  padding: 30rpx;
+  background-color: #fff;
+}

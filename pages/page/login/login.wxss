@@ -1,0 +1,48 @@
+.page-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+}
+.page-section {
+  margin-top: 200rpx;
+  text-align: center;
+}
+.page-section .logo-img {
+  width: 360rpx;
+  margin: 0 auto 10rpx;
+}
+.page-section .error-tip {
+  height: 50rpx;
+  margin-bottom: 10rpx;
+  color: #e64340;
+}
+.page-section .section {
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.page-section .section .section-label {
+  display: inline-block;
+  position: absolute;
+  left: 30rpx;
+  top: 19rpx;
+  font-weight: 600;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+.page-section .section input {
+  text-align: left;
+  border-radius: 5rpx;
+  height: 88rpx;
+  border: 1px solid #e5e5e5;
+  padding: 0 10rpx 0 120rpx;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.page-section .placeholder-s {
+  color: #959595;
+  font-size: 26rpx;
+}
+.page-section .btn-area {
+  margin-top: 40rpx;
+}

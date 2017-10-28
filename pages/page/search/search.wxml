@@ -1,0 +1,70 @@
+<view class="search-container">
+    <icon type="search" class="search-icon" size="16" color="{{item}}" />
+    <input type="text" class="search-input" placeholder="搜索" confirm-type="search" />
+</view>
+<view>
+  <view class='img-content-list-container' style="padding-top: 30rpx;">
+    <view class='img-content-list-title'>我的联系人</view>
+    <navigator url="contact-detail/contact-detail" class="navigator">
+      <view class='img-content-list clearfix'>
+        <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+        <view class='img-content-list-content clearfix'>
+          <view class='img-content-list-maintext'>
+            <text class='img-content-maintext-left'>xiejpde小号</text>
+            <view class='pull-right'>
+              <text class='img-content-maintext-center'>CEO</text>
+              <text class='img-content-maintext-right icon icon-empty_star'></text>
+            </view>
+          </view>
+          <view class='img-content-list-subtext'>
+            <view class='img-content-subtext-left'>everstring</view>
+            <view class='img-content-subtext-right pull-right'>判断刷选</view>
+          </view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </view>
+    </navigator>
+  </view>
+  <view class='img-content-list-container'>
+    <view class='img-content-list-title'>我的公司</view>
+    <navigator url="contact-detail/contact-detail" class="navigator">
+      <view class='img-content-list clearfix'>
+        <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+        <view class='img-content-list-content clearfix'>
+          <view class='img-content-list-maintext'>
+            <text class='img-content-maintext-left'>everstring厦门</text>
+            <view class='pull-right'>
+              <text class='img-content-maintext-right'>重要/总联系人</text>
+            </view>
+          </view>
+          <view class='img-content-list-subtext'>
+            <view class='img-content-subtext-left'>最近行为</view>
+            <view class='img-content-subtext-right pull-right'>中国，厦门</view>
+          </view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </view>
+    </navigator>
+  </view>
+  <view class='img-content-list-container target-list-container'>
+    <view class='img-content-list-title'>发现公司</view>
+    <navigator url="contact-detail/contact-detail" class="navigator">
+      <view class='img-content-list clearfix'>
+        <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+        <view class='img-content-list-content clearfix'>
+          <view class='img-content-list-maintext'>
+            <text class='img-content-maintext-left'>socialbird Inc</text>
+          </view>
+          <view class='img-content-list-subtext'>
+            <view class='img-content-subtext-left'>Predictive Lead Scoring Platform</view>
+          </view>
+          <view class='img-content-list-subtext'>
+            <view class='img-content-subtext-left'>50-200 Employees  | $ 650M Revenue</view>
+            <view class='img-content-subtext-right'>California, United States</view>
+          </view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </view>
+    </navigator>
+  </view>
+</view>

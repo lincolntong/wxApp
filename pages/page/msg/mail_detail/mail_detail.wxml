@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class='info-header clearfix'>
+    <text class='info-header-label-text'>邮件标题</text>
+    <button type="primary" class="pull-right" bindtap="goReply">回复</button>
+  </view>
+  <view class='info-body'>
+    <view>邮件正文</view>
+    <view>
+      xxxxxxxxxxxxxxxxxxxxxxxx
+    </view>
+  </view>
+
+
+  <view class="bottom-modal-container" animation="{{animationData}}" style="transform: scale(1,0)" >
+    <view class="modal-container-body">
+      <form bindsubmit="bindFormSubmit">
+        <textarea class="reply-area" cursor-spacing="120" show-confirm-bar="false" confirm-type="done" placeholder="请输入你要回复的内容" name="textarea"/>
+        <view class="submit-content">
+          <button type="default" form-type="reset" bindtap="cancelReply">取消回复</button>
+          <button type="primary" form-type="submit" bindtap="reply">回复</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view class="bg-cover" wx:if="{{replyMail}}"></view>
+</view>

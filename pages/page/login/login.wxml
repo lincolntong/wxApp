@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+        <image class="logo-img" mode="widthFix" src='../../../images/logo.png'></image>
+         <view class="error-tip {{errorTip ? 'block' : ''}}">{{errorTip}}</view>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class="section">
+            <view class="section-label">账号</view>
+            <input name="account" focus="{{accountFocus}}" placeholder-class='placeholder-s {{accountError ? "error" : ""}}' placeholder="{{accountPlaceholder}}" />
+          </view>
+          <view class="section">
+            <view class="section-label">密码</view>
+            <input name="password" focus="{{passwordFocus}}" placeholder-class='placeholder-s {{passwordError ? "error" :""}}' type='password' placeholder="{{passwordPlaceholder}}" />
+          </view>
+          <view class="btn-area">
+            <button formType="submit" type='primary'>登录</button>
+          </view>
+        </form>
+    </view>
+  </view>
+</view>
+
+
+

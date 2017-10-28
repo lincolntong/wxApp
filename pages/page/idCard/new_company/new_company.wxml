@@ -1,0 +1,71 @@
+<view class="container">
+  <view class='info-header'>
+    <text class='info-header-label-text'>基本信息</text>
+  </view>
+  <form bindsubmit="saveEdit" bindreset="cancelEdit">
+    <view class='info-body'>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>名称</text>
+        <view class='info-msg-list-text'><input name="position" placeholder="请输入联系人名称" placeholder-class="placeholder"/></view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>最近联系人</text>
+        <picker  class='info-msg-list-text' bindchange="bindPickerChange" value="{{stageIndex}}" range="{{array}}">
+          <view class="picker">
+            {{array[stageIndex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>国家地区</text>
+        <picker class="info-msg-list-text" name="area" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>行业</text>
+        <view class='info-msg-list-text'><input name="position"  placeholder="请输入行业" placeholder-class="placeholder"/></view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>营业额</text>
+        <view class='info-msg-list-text'><input name="position"  placeholder="请输入营业额" placeholder-class="placeholder"/></view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>雇员数</text>
+        <view class='info-msg-list-text'>
+          <input placeholder="请输入雇员数" name="mail1"/>
+        </view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>网址</text>
+        <view class='info-msg-list-text'><input name="position"  placeholder="请输入网址" placeholder-class="placeholder"/></view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>标签</text>
+        <view class='info-msg-list-text'>
+          <view class="newDatatext">{{newPhoneNum}}</view>
+          <input placeholder="请输入电话" name="tel1" placeholder-class="placeholder"/>
+        </view>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>来源</text>
+        <picker  class='info-msg-list-text' name="type" bindchange="bindPickerChange" value="{{stageIndex}}" range="{{array}}">
+          <view class="picker">
+            {{array[stageIndex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>负责人</text>
+        <view class='info-msg-list-text'>
+          <input placeholder="请输入负责人" placeholder-class="placeholder" name="Principal"/>
+        </view>
+      </view>
+    </view>
+    <view class="add-btn-content">
+      <button type="primary" formType="submit" class="edit-btn">保存公司</button>
+    </view>
+  </form>
+</view>

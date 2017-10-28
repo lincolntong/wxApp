@@ -1,0 +1,85 @@
+<import src='../../components/search/search.wxml'/>
+<view class='container overflow-hidden'>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <template is="search"></template>
+    <view class='img-content-list-container'>
+      <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/notice/ic_Facebook.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <text class='img-content-maintext-left'>xiejp</text>
+              <view class='pull-right'>
+                <text class='img-content-maintext-center'>CEO</text>
+                <text class='img-content-maintext-right'>重要</text>
+              </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>socialbird</view>
+              <view class='img-content-subtext-right pull-right'>判断刷选</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <text class='img-content-maintext-left'>笨鸟社交</text>
+              <view class='pull-right'>
+                <text class='img-content-maintext-center'>CEO</text>
+                <text class='img-content-maintext-right'>重要</text>
+              </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>笨鸟社交是国企</view>
+              <view class='img-content-subtext-right pull-right'>判断刷选</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_target"></text>
+            <text>新建联系人</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_id_card"></text>
+            <text>扫描名片</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_scan"></text>
+            <text>扫描相册内名片</text>
+          </view>
+        </view>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-thin-clock"></text>
+            <text>最近联系</text>
+            <view class="selection pull-right">
+            </view>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-two_person"></text>
+            <text>最近互动行为</text>
+            <text class="icon icon-finish5"></text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-order"></text>
+            <text>评分排序</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

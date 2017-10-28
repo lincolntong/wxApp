@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/page/msg/msg",
+    "pages/page/msg/mail_detail/mail_detail",
+    "pages/page/msg/social_detail/social_detail",
+    "pages/page/contact/contact",
+    "pages/page/contact/contact_detail/contact_detail",
+    "pages/page/idCard/idCard",
+    "pages/page/idCard/new_contact/new_contact",
+    "pages/page/idCard/new_company/new_company",
+    "pages/page/idCard/id_result/id_result",
+    "pages/page/search/search",
+    "pages/page/company/company",
+    "pages/page/company/company_detail/company_detail",
+    "pages/page/report/report",
+    "pages/page/report/report_teammate/report_teammate",
+    "pages/page/example/example"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SocialBird笨鸟社交",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#f6a72a",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/page/msg/msg",
+        "iconPath": "images/nav/msg.png",
+        "selectedIconPath": "images/nav/msg-active.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/page/contact/contact",
+        "iconPath": "images/nav/contact.png",
+        "selectedIconPath": "images/nav/contact-active.png",
+        "text": "联系人"
+      },
+      {
+        "pagePath": "pages/page/idCard/idCard",
+        "iconPath": "images/ico-add-addr.png",
+        "selectedIconPath": "images/ico-add-addr.png"
+      },
+      {
+        "pagePath": "pages/page/company/company",
+        "iconPath": "images/nav/company.png",
+        "selectedIconPath": "images/nav/company-active.png",
+        "text": "公司"
+      },
+      {
+        "pagePath": "pages/page/report/report",
+        "iconPath": "images/nav/report.png",
+        "selectedIconPath": "images/nav/report-active.png",
+        "text": "报表"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

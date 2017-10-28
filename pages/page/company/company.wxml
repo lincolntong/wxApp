@@ -1,0 +1,76 @@
+<import src='../../components/search/search.wxml'/>
+<view class='container overflow-hidden'>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <template is="search"></template>
+    <view class='img-content-list-container'>
+      <navigator url="company_detail/company_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/notice/ic_Facebook.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <text class='img-content-maintext-left'>yeahmobi</text>
+              <view class='pull-right'>
+                <text class='img-content-maintext-right'>重要/总联系人</text>
+              </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>最近行为</view>
+              <view class='img-content-subtext-right pull-right'>国家，地区</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="company_detail/company_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <text class='img-content-maintext-left'>socialbird</text>
+              <view class='pull-right'>
+                <text class='img-content-maintext-right'>2/6 联系人</text>
+              </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>最近行为</view>
+              <view class='img-content-subtext-right pull-right'>中国，上海</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_add_company"></text>
+            <text>新建公司</text>
+          </view>
+        </view>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-two_person"></text>
+            <text>最近互动行为</text>
+            <view class="selection pull-right">
+            </view>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-thin-clock"></text>
+            <text>最近联系</text>
+            <text class="icon icon-finish5"></text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-order"></text>
+            <text>评分排序</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,153 @@
+<!--<import src='../../components/search/search.wxml' />-->
+<view class="container overflow-hidden">
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <!--<template is="search" data="{{searchData}}"></template>-->
+    <include src="../../components/search/search.wxml"/>
+    <view class='img-content-list-container'>
+      <navigator url="mail_detail/mail_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <view class="img-content-list-img img-content-mail">
+            <text class="icon icon-msg5_nav"></text>
+            <view class="new-msg-mark"></view>
+          </view>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              curryzcurr厦门额人啦剪短发阿加色粉阿什顿发顺丰
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>联系人在web触点提交了表单</view>
+              <view class='img-content-subtext-right pull-right'>2017-10-13 15:30</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <view class="img-content-list-img img-content-activity">
+            <text class="icon icon-date1"></text>
+            <view class="new-msg-mark"></view>
+          </view>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <view class='img-content-maintext-left'>
+                <navigator url="contact-detail/contact-detail" open-type="navigate" class="navigator">xiejp</navigator>
+                at
+                <navigator url="contact-detail/contact-detail" open-type="navigate" class="navigator">Socialbird
+                </navigator>
+              </view>
+
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>给你发送邮件</view>
+              <view class='img-content-subtext-right pull-right'>2017-10-13 15：30</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <view class="img-content-list-img img-content-social">
+            <text class="icon icon-wx_social"></text>
+            <view class="new-msg-mark"></view>
+          </view>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <view class='img-content-maintext-left'>
+                <navigator url="contact-detail/contact-detail" open-type="navigate" class="navigator">xiejp</navigator>
+                at
+                <navigator url="contact-detail/contact-detail" open-type="navigate" class="navigator">Socialbird
+                </navigator>
+              </view>
+
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>将你的邮件标记为垃圾邮件</view>
+              <view class='img-content-subtext-right pull-right'>2017-10-13 15：30</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <view class="img-content-list-img img-content-target">
+            <text class="icon icon-wx_target"></text>
+            <view class="new-msg-mark"></view>
+          </view>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <view class='img-content-maintext-left'>
+                atengbrilliance@foxmail.com
+              </view>
+
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>提交了表单</view>
+              <view class='img-content-subtext-right pull-right'>2017-10-13 15：30</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="social_detail/social_detail" open-type="navigate" class="navigator">
+        <view class='img-content-list clearfix'>
+          <view class="img-content-list-img img-content-msg">
+            <text class="icon icon-wx_msg"></text>
+            <view class="new-msg-mark"></view>
+          </view>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+              <view class='img-content-maintext-left'>
+                ateng
+              </view>
+
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>给你发送了message</view>
+              <view class='img-content-subtext-right pull-right'>2017-10-13 15：30</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--这里是左滑按钮部分-->
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix' data-index="1" bindtap="slotList">
+            <text class="icon icon-contact"></text>
+            <text>只看联系人相关</text>
+            <text class="icon icon-finish5" wx:if="{{1 == activeIndex}}"></text>
+          </view>
+          <view class='filter-list-item clearfix' data-index="2" bindtap="showIndex">
+            <text class="icon icon-wx_social"></text>
+            <text>只显示社交相关</text>
+            <text class="icon icon-finish5" wx:if="{{2 == activeIndex}}"></text>
+          </view>
+          <view class='filter-list-item clearfix' data-index="3" bindtap="showIndex">
+            <text class="icon icon-date1"></text>
+            <text>只显示活动相关</text>
+            <text class="icon icon-finish5" wx:if="{{3 == activeIndex}}"></text>
+          </view>
+          <view class='filter-list-item clearfix' data-index="4" bindtap="showIndex">
+            <text class="icon icon-icon icon-wx_target"></text>
+            <text>只显示线索相关</text>
+            <text class="icon icon-finish5" wx:if="{{4 == activeIndex}}"></text>
+          </view>
+          <view class='filter-list-item clearfix' data-index="5" bindtap="showIndex">
+            <text class="icon icon-login"></text>
+            <text>只看陌生人相关</text>
+            <text class="icon icon-finish5" wx:if="{{5 == activeIndex}}"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

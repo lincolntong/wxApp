@@ -1,0 +1,50 @@
+.container-inner{
+  background-color: #fff;
+}
+.container .info-header-msg{
+  margin-right: 40rpx;
+}
+/*.info-header .icon-star2,.info-header .icon-empty_star{*/
+  /*color:#f6a72a;*/
+/*}*/
+.container .info-header-msg .info-header-msg-label{
+  font-size: 28rpx;
+  margin-right: 15rpx;
+  margin-left: 25rpx;
+  vertical-align: middle;
+}
+.container .info-header-msg .info-header-msg-text{
+  vertical-align: middle;
+}
+.container .info-header-msg .info-header-msg-icon{
+  margin-left: 10rpx;
+  color: #f6a72a;
+  vertical-align: middle;
+}
+.container .info-msg-list-text.info-msg-list-label{
+  width: calc(100% - 170rpx);
+}
+.info-msg-list-text .label{
+  margin-right: 10rpx;
+}
+.submit-content button[type='primary']{
+  padding-left:120rpx;
+  padding-right:120rpx;
+}
+.edit-btn-content{
+  background-color: #fff;
+  padding: 15rpx 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-dialog.access-modal .modal-dialog-body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-dialog.access-modal .idCardImage{
+  height: 300rpx;
+}

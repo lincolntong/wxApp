@@ -1,0 +1,82 @@
+@import "../../common/style";
+.search-container{
+	position: relative;
+	padding: 15rpx;
+	z-index: 10;
+	background-color: @bgColor;
+}
+.search-container .search-icon{
+	position: absolute;
+	left: 26rpx;
+	top: 28rpx;
+}
+.search-container .search-input{
+	width: 80%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.search-container .cancle-btn{
+	font-size: 32rpx;
+	color: @primaryColor;
+	float: right;
+	line-height: 60rpx;
+}
+.search-container .search-input,
+.search-container .search-icon-btn{
+	padding: 0 10rpx 0 57rpx;
+	font-size: 30rpx;
+	border-radius: 10rpx;
+	height: 60rpx;
+	background-color:#fff;
+}
+.search-container .search-icon-btn{
+	text-align: center;
+	padding: 0 10rpx;
+	line-height: 50rpx;
+}
+.search-container .search-icon-btn icon{
+	vertical-align: middle;
+	line-height: 0;
+	margin-right: 5rpx;
+}
+.search-container .search-icon-btn text{
+	opacity: 0.6;
+	vertical-align: middle;
+}
+.search-result{
+	background-color: #fff;
+	color: @fontColor;
+	padding-left: 15rpx;
+	padding-right: 15rpx;
+	font-size: 30rpx;
+	border-top: 1px solid @borderColor;
+	border-bottom:1px solid @borderColor;
+	position: absolute;
+	top:88rpx;
+	left: 0;
+	width: e('calc(100% - 30rpx)');
+	z-index: 10;
+}
+.bg-cover{
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color: @bgColor;
+	z-index: 9;
+	height: 100%;
+	width: 100%;
+}
+.search-result .search-result-list{
+	padding: 20rpx 15rpx 20rpx 60rpx;
+	border-bottom:1px solid @borderColor;
+}
+.search-result .search-result-list:last-child{
+	border-bottom:none;
+}
+.search-result .search-result-from{
+	float: right;
+	font-size: 28rpx;
+}
+.search-result .TargetSearch-btn{
+	float: right;
+}

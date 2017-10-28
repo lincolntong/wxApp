@@ -1,0 +1,37 @@
+<view class="container">
+  <view class='img-content-list-container'>
+    <navigator url="new_contact/new_contact" open-type="navigate">
+      <view class='img-content-list clearfix'>
+        <view class='content-list-content'>
+          <text class="icon icon-wx_add_contact"></text>
+          <text>创建新的联系人</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="new_company/new_company" open-type="navigate">
+      <view class='img-content-list clearfix'>
+        <view class='content-list-content'>
+          <text class="icon icon-wx_add_company"></text>
+          <text>创建新的公司</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </view>
+    </navigator>
+    <view class='img-content-list clearfix'>
+      <view class='content-list-content' bind:tap="photoIDCard">
+        <text class="icon icon-wx_scan"></text>
+        <text>创建联系人（拍摄名片以识别）</text>
+        <view class="navigator-arrow"></view>
+      </view>
+    </view>
+    <view class='img-content-list clearfix'>
+      <view class='content-list-content' bind:tap="upIDCard">
+        <text class="icon icon-wx_id_card"></text>
+        <text>创建联系人（选择相册中的名片）</text>
+        <view class="navigator-arrow"></view>
+      </view>
+    </view>
+
+  </view>
+</view>

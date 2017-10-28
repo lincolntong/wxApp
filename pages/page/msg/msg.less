@@ -1,0 +1,36 @@
+@import "../../common/style";
+.ellipsis{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.container{
+	position: relative;
+}
+.img-content-list-img{
+	position: relative;
+	image{
+		width: 100%;
+		height: 100%;
+	}
+	.new-msg-mark{
+		position: absolute;
+		top:25rpx;
+		right: -20rpx;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #e64340;
+	}
+}
+.img-content-list-maintext{
+	.ellipsis;
+}
+.img-content-subtext-left{
+	max-width: e('calc(100% - 380rpx)');
+	.ellipsis;
+}
+.img-content-subtext-right{
+	.ellipsis;
+	max-width: 240rpx;
+}

@@ -1,0 +1,101 @@
+
+ <import src='../../components/search/search.wxml' />   
+<view class='container'>
+   <template is="search"></template>
+   <view class='img-content-list-container'>
+     <view class='img-content-list-title'>图文组合列表</view>
+     <view class='img-content-list clearfix'>
+      <view class='content-list-content'>
+        <image src='../../../images/kefu.png'></image>
+        <text>单行列表</text>
+      </view>
+      <view class='content-list-control'><icon class="icon-small" type="success_no_circle" size="23"></icon></view>
+    </view>
+     <navigator url="contact-detail/contact-detail" class="navigator">
+       <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+            <text class='img-content-maintext-left'>笨鸟社交</text>
+            <view class='pull-right'>
+              <text class='img-content-maintext-center'>CEO</text>
+              <text class='img-content-maintext-right'>重要</text>
+            </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>笨鸟社交是国企</view>
+              <view class='img-content-subtext-right pull-right'>判断刷选</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+      </view>
+     </navigator>
+      
+     <navigator url="contact-detail/contact-detail" class="navigator">
+       <view class='img-content-list clearfix'>
+          <image class='img-content-list-img' src='../../../images/kefu.png'></image>
+          <view class='img-content-list-content clearfix'>
+            <view class='img-content-list-maintext'>
+            <text class='img-content-maintext-left'>笨鸟社交</text>
+            <view class='pull-right'>
+              <text class='img-content-maintext-center'>CEO</text>
+              <text class='img-content-maintext-right'>重要</text>
+            </view>
+            </view>
+            <view class='img-content-list-subtext'>
+              <view class='img-content-subtext-left'>笨鸟社交是国企</view>
+              <view class='img-content-subtext-right pull-right'>判断刷选</view>
+            </view>
+          </view>
+          <view class="navigator-arrow"></view>
+      </view>
+     </navigator>
+    
+
+     <view class='img-content-list-more'>
+       <view>查看更多</view>
+       <view class="navigator-arrow"></view>
+     </view>
+   </view> 
+
+   <view class='container'>
+  <view class='info-header'>
+    <text class='info-header-label-text'>基本信息</text>
+    <view class='info-header-msg pull-right'>
+      <text class='info-header-msg-label'>评分</text>
+      <text class='info-header-msg-text'>80</text>
+      <text class='info-header-msg-label'>评级</text>
+      <text class='info-header-msg-text'>B</text>
+      <text class='info-header-msg-label'>星标</text>
+      <text class='info-header-msg-text'>*</text>
+    </view>
+  </view>
+  <view class='info-body'>
+    <navigator url="contact-detail/contact-detail" class="navigator">
+      <view class='info-msg-list'>
+        <text class='info-msg-list-label'>公司</text>
+        <text class='info-msg-list-text'>笨鸟社交有限公司</text>
+        <view class="navigator-arrow"></view>
+      </view>
+    </navigator>
+    <view class='info-msg-list'>
+        <text class='info-msg-list-label'>职位</text>
+        <text class='info-msg-list-text'>产品经理</text>
+        <text class='info-msg-list-text pull-right'>2017-10.15</text>
+    </view>
+    <view class='info-msg-list'>
+        <text class='info-msg-list-label'>联系方式</text>
+        <text class='info-msg-list-text'><text class='text-phone'>1323884503</text>，<text class='text-phone'>91726084</text></text>
+    </view>
+  </view>
+  <view class='info-header'>
+    <text class='info-header-label-text'>跟进备注</text>
+  </view>
+  <view class='info-body clearfix'>
+    <textarea placeholder='请输入跟进备注'></textarea>
+    <button type='default' size='mini' class='pull-right'>增加备注</button>
+  </view>
+</view>
+
+</view>
+

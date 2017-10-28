@@ -1,0 +1,43 @@
+<!--<template name="search">-->
+  <view class="search-container">
+    <block wx:if="{{isSearch}}">
+      <icon type="search" class="search-icon" size="16" />
+      <input type="text" class="search-input" placeholder="搜索" confirm-type="go" focus="{{isSearch}}" bindinput="searchResult" bindconfirm="goTargetSearch" maxlength="17"/>
+      <view class="cancle-btn" bindtap="cancleSearch">取消</view>
+    </block>
+    <block wx:else>
+      <view class="search-icon-btn" bindtap="goSearch">
+        <icon type="search" size="16"/>
+        <text>搜索</text>
+      </view>
+    </block>
+    <block wx:if="{{getResult}}">
+      <view class="search-result">
+        <view class="search-result-list clearfix">
+          <text>笨鸟社交北京公司</text>
+          <text class="search-result-from">公司</text>
+        </view>
+        <view class="search-result-list clearfix">
+          <text>笨鸟社交北京公司</text>
+          <text class="search-result-from">公司</text>
+        </view>
+        <view class="search-result-list clearfix">
+          <text>笨鸟社交CEO</text>
+          <text class="search-result-from">联系人</text>
+        </view>
+        <view class="search-result-list clearfix">
+          <text>笨鸟社交CEO</text>
+          <text class="search-result-from">联系人</text>
+        </view>
+        <view class="search-result-list clearfix">
+          <text>{{targetSearch}}</text>
+          <navigator url="../../page/search/search" class="pull-right">
+            <button type="primary" size="mini" class="TargetSearch-btn">发现</button>
+          </navigator>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="bg-cover" wx:if="{{getResult}}" bindtap="cancleSearch"></view>
+
+<!--</template>-->

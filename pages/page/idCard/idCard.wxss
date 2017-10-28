@@ -1,0 +1,11 @@
+.upload-container{
+  padding: 30rpx;
+  margin-top: 150rpx;
+  text-align: center;
+}
+.upload-container button{
+  margin-bottom: 30rpx;
+}
+.content-list-content .icon{
+  margin-right: 15rpx;
+}

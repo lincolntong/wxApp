@@ -1,0 +1,30 @@
+<view class='container overflow-hidden'>
+  <view class='img-content-list-container'>
+    <navigator url="contact_detail/contact_detail" open-type="navigate" class="navigator">
+      <view class='img-content-list clearfix'>
+        <image class='img-content-list-img' src='../../../../images/goods02.png'></image>
+        <view class='img-content-list-content clearfix'>
+          <view class='img-content-list-maintext'>
+            <text>下雨回家收衣服</text>
+          </view>
+        </view>
+        <view class="navigator-arrow"></view>
+      </view>
+    </navigator>
+    <view class='img-content-list clearfix'>
+      <view class='img-content-list-content clearfix'>
+        <view class='img-content-list-maintext pull-right'>
+          <text>好的，没问题</text>
+          <image class='img-content-list-img reply-avatar' src='../../../../images/kefu.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='img-content-list clearfix'>
+      <view class='img-content-list-content clearfix'>
+        <view class='img-content-list-maintext pull-right'>
+          <button type="primary" size="mini">回复</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

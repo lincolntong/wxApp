@@ -1,0 +1,13 @@
+.container{
+  background-color: #fff;
+}
+.container .info-msg-list-text{
+  width: calc(100% - 170rpx);
+}
+.add-btn-content{
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}

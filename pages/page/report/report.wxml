@@ -1,0 +1,62 @@
+<view class='container overflow-hidden'>
+  <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
+        bindtouchend="touchE">
+    <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
+    <view class='info-header'>
+      <text class='info-header-label-text'>团队工作成果</text>
+      <view class='info-header-msg pull-right'>
+        <view class='info-header-msg-label'>2017.10.13-2017-10.29</view>
+      </view>
+    </view>
+    <view class='info-body'>
+      <view wx:for='{{teamReport}}' class='info-msg-list'>
+        <text class='info-msg-list-label'>{{item.msg_desc}}</text>
+        <text class='info-msg-list-text pull-right'>{{item.msg_dt}}</text>
+      </view>
+    </view>
+    <view class='info-header'>
+      <text class='info-header-label-text'>团队成员报表</text>
+    </view>
+    <view class='info-body clearfix'>
+      <navigator url="report_teammate/report_teammate" class="navigator">
+        <view class='info-msg-list info-msg-list-tb' bindtap="changeReportShow">
+          <text class='info-msg-list-text info-msg-list-name' style="width: 30%">zengzt</text>
+          <text class='info-msg-list-text' style="width: 20%">经理</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+      <navigator url="report_teammate/report_teammate" class="navigator">
+        <view class='info-msg-list info-msg-list-tb' bindtap="changeReportShow">
+          <text class='info-msg-list-text info-msg-list-name' style="width: 30%">zengzt</text>
+          <view class="navigator-arrow"></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="filter-menu">
+    <view class="filter-menu-container">
+      <view class='filter-list'>
+        <view class="filter-list-group">
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-task2"></text>
+            <text>今日统计</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_seven_day"></text>
+            <text>最近7天</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-wx_thirty_day"></text>
+            <text>最近30天</text>
+          </view>
+          <view class='filter-list-item clearfix'>
+            <text class="icon icon-tag2"></text>
+            <text>自定义时间</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
