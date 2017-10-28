@@ -1,20 +1,32 @@
-.container .info-msg-list .info-msg-list-label{
-    width: 190rpx;
+.container-inner{
+  background-color: #fff;
 }
-.container .info-header-msg .info-header-msg-label{
-    font-size: 34rpx;
-    margin-right: 10rpx;
-    margin-left: 20rpx;
-    vertical-align: middle;
+.container .info-msg-list .info-msg-list-label {
+  width: 215rpx;
 }
-.container .info-header-msg .info-header-msg-text{
-    vertical-align: middle;
+
+.container .info-header-msg .info-header-msg-label {
+  font-size: 34rpx;
+  margin-right: 10rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
 }
-.container .info-header-msg .info-header-msg-icon{
-    margin-left: 10rpx;
-    color: #666;
-    vertical-align: middle;
+
+.container .info-header-msg .info-header-msg-text {
+  vertical-align: middle;
 }
-.info-msg-list-text .label{
-    margin-right: 10rpx;
+
+.container .info-header-msg .info-header-msg-icon {
+  margin-left: 10rpx;
+  color: #666;
+  vertical-align: middle;
+}
+
+.info-msg-list-text .label {
+  margin-right: 10rpx;
+}
+
+.submit-content button[type='primary'] {
+  padding-left: 120rpx;
+  padding-right: 120rpx;
 }

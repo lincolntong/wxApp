@@ -3,6 +3,10 @@ var common = require('../../../common/common.js');
 Page({
   data: {
     isSearch:false,
+    goEdit:false,
+    dataImportant:false,
+    region: ['广东省', '广州市', '海珠区'],
+    stageIndex:2,
     contact_detail:
       [
         {msg_desc: '最近联系人',msg_dt:'厦门笨鸟电子商务有限公司'},
@@ -19,15 +23,14 @@ Page({
         {msg_desc: '来源',msg_dt:'表单',msg_time:'2017.10.15'},
         {msg_desc: '负责人',msg_dt:''},
         {msg_desc: '标签',msg_dt:''},
-      ]
+      ],
+    array:['陌生人','普通客户','意向客户','成单客户'],
+    idCardImageSrc:'../../../../images/goods02.png',
+    showAccess:false
+
   },
   onHide: function () {
-    app.globalData.filterShow = false;
-    app.globalData.ThetxtStyle = "transform: translateX(0);overflow-y:auto;";
-    this.setData({
-      filterShow:false,
-      ThetxtStyle : "transform: translateX(0);overflow-y:auto;"
-    })
+    common.closeSideMenu(this)
   },
   gosearch:function () {
     this.setData({
@@ -43,5 +46,26 @@ Page({
   },
   touchE: function (e) {
     common.touchE(e,this);
+  },
+  eidtCompany:function () {
+    common.closeSideMenu(this)
+    this.setData({
+      goEdit:true
+    })
+  },
+  cancelEdit:function (e) {
+    this.setData({
+      goEdit:false
+    })
+  },
+  saveEdit:function (e) {
+    this.setData({
+      goEdit:false
+    })
+  },
+  changeImp:function () {
+    this.setData({
+      dataImportant: !this.data.dataImportant
+    })
   }
 })

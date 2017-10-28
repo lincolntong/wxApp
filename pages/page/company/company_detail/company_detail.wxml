@@ -1,54 +1,115 @@
-<view class='container overflow-hidden'>
+<view class='container overflow-x-hidden'>
   <view class="container-inner" style="{{ThetxtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM"
         bindtouchend="touchE">
     <view class="bg-cover container-bg-cover" wx:if="{{filterShow}}"></view>
-    <view class='info-header'>
-      <text class='info-header-label-text'>基本信息</text>
-      <view class='info-header-msg pull-right'>
-        <text class='info-header-msg-label'>评分</text>
-        <text class='info-header-msg-text'>80</text>
-        <text class='info-header-msg-label'>评级</text>
-        <text class='info-header-msg-text'>B</text>
-        <text class='info-header-msg-icon icon icon-empty_star'></text>
-      </view>
-    </view>
-    <view class='info-body'>
-      <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
-        <view class='info-msg-list'>
-          <text class='info-msg-list-label'>重要联系人</text>
-          <text class='info-msg-list-text'>xiejp</text>
-          <view class="navigator-arrow"></view>
+
+    <block wx:if="{{!goEdit}}">
+      <view class='info-header'>
+        <text class='info-header-label-text'>基本信息</text>
+        <view class='info-header-msg pull-right'>
+          <text class='info-header-msg-label'>评分</text>
+          <text class='info-header-msg-text'>80</text>
+          <text class='info-header-msg-label'>评级</text>
+          <text class='info-header-msg-text'>B</text>
+          <text class='info-header-msg-icon icon icon-empty_star'></text>
         </view>
-      </navigator>
-      <view wx:for='{{contact_detail}}' class='info-msg-list'>
-        <text class='info-msg-list-label'>{{item.msg_desc}}</text>
-        <text class='info-msg-list-text'>{{item.msg_dt}}</text>
-        <text wx:if='{{item.msg_time}}' class='info-msg-list-text pull-right'>{{item.msg_time}}</text>
       </view>
-    </view>
-    <view class='info-header'>
-      <text class='info-header-label-text'>其他联系人</text>
-    </view>
-    <view class='info-body clearfix'>
-      <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
-        <view class='info-msg-list info-msg-list-tb'>
-          <text class='info-msg-list-text info-msg-list-name' style="width: 30%">zengzt</text>
-          <text class='info-msg-list-text' style="width: 20%">产品经理</text>
-          <text class='info-msg-list-text pull-right' style="width: 30%">重要</text>
-          <view class="navigator-arrow"></view>
+      <view class='info-body'>
+        <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>重要联系人</text>
+            <text class='info-msg-list-text'>xiejp</text>
+            <view class="navigator-arrow"></view>
+          </view>
+        </navigator>
+        <view wx:for='{{contact_detail}}' class='info-msg-list'>
+          <text class='info-msg-list-label'>{{item.msg_desc}}</text>
+          <text class='info-msg-list-text'>{{item.msg_dt}}</text>
+          <text wx:if='{{item.msg_time}}' class='info-msg-list-text pull-right'>{{item.msg_time}}</text>
         </view>
-      </navigator>
-    </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='info-header'>
+        <text class='info-header-label-text'>基本信息</text>
+        <view class='info-header-msg pull-right'>
+          <text class='icon info-header-msg-icon {{dataImportant ? "icon-star2" : "icon-empty_star"}}' bindtap="changeImp"></text>
+        </view>
+      </view>
+      <form bindsubmit="saveEdit" bindreset="cancelEdit">
+        <view class='info-body'>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>最重要联系人</text>
+            <picker  class='info-msg-list-text' bindchange="bindPickerChange" value="{{stageIndex}}" range="{{array}}">
+              <view class="picker">
+                {{array[stageIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>国家地区</text>
+            <picker class="info-msg-list-text" name="area" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="picker">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+              </view>
+            </picker>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>地址</text>
+            <view class='info-msg-list-text'><input name="addr" value="国金广场"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>行业</text>
+            <view class='info-msg-list-text'><input name="business" value="国金广场"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>营业额</text>
+            <view class='info-msg-list-text'><input name="business" value="100"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>雇员数</text>
+            <view class='info-msg-list-text'><input name="employees" value="100"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>网址</text>
+            <view class='info-msg-list-text'><input name="url" value="100"/></view>
+          </view>
+          <view class='info-msg-list'>
+            <text class='info-msg-list-label'>标签</text>
+            <view class='info-msg-list-text'>
+              <input value="外贸公司" name="label"/>
+            </view>
+          </view>
+        </view>
+        <view class="submit-content">
+          <button type="default" formType="reset">放弃修改</button>
+          <button type="primary" formType="submit">保存修改</button>
+        </view>
+      </form>
+    </block>
+    <block wx:if="{{!goEdit}}">
+      <view class='info-header'>
+        <text class='info-header-label-text'>其他联系人</text>
+      </view>
+      <view class='info-body clearfix'>
+        <navigator url="../../contact/contact_detail/contact_detail" class="navigator">
+          <view class='info-msg-list info-msg-list-tb'>
+            <text class='info-msg-list-text info-msg-list-name' style="width: 30%">zengzt</text>
+            <text class='info-msg-list-text' style="width: 20%">产品经理</text>
+            <text class='info-msg-list-text pull-right' style="width: 30%">重要</text>
+            <view class="navigator-arrow"></view>
+          </view>
+        </navigator>
+      </view>
+    </block>
   </view>
   <view class="filter-menu">
     <view class="filter-menu-container">
       <view class='filter-list'>
         <view class="filter-list-group">
-          <view class='filter-list-item clearfix'>
+          <view class='filter-list-item clearfix' bindtap="eidtCompany">
+            <text class="icon icon-leaf"></text>
             <text>编辑公司</text>
-            <view class="selection pull-right">
-              <icon type="success_no_circle" color="#fff"></icon>
-            </view>
           </view>
         </view>
       </view>

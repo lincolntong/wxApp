@@ -47,10 +47,12 @@
     <view class="filter-menu-container">
       <view class='filter-list'>
         <view class="filter-list-group">
-          <view class='filter-list-item clearfix'>
-            <text class="icon icon-wx_add_company"></text>
-            <text>新建公司</text>
-          </view>
+          <navigator url="../idCard/new_company/new_company" open-type="navigate">
+            <view class='filter-list-item clearfix'>
+              <text class="icon icon-wx_add_company"></text>
+              <text>新建公司</text>
+            </view>
+          </navigator>
         </view>
         <view class="filter-list-group">
           <view class='filter-list-item clearfix'>

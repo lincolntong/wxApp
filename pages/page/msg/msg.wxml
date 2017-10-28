@@ -125,22 +125,22 @@
             <text>只看联系人相关</text>
             <text class="icon icon-finish5" wx:if="{{1 == activeIndex}}"></text>
           </view>
-          <view class='filter-list-item clearfix' data-index="2" bindtap="showIndex">
+          <view class='filter-list-item clearfix' data-index="2" bindtap="slotList">
             <text class="icon icon-wx_social"></text>
             <text>只显示社交相关</text>
             <text class="icon icon-finish5" wx:if="{{2 == activeIndex}}"></text>
           </view>
-          <view class='filter-list-item clearfix' data-index="3" bindtap="showIndex">
+          <view class='filter-list-item clearfix' data-index="3" bindtap="slotList">
             <text class="icon icon-date1"></text>
             <text>只显示活动相关</text>
             <text class="icon icon-finish5" wx:if="{{3 == activeIndex}}"></text>
           </view>
-          <view class='filter-list-item clearfix' data-index="4" bindtap="showIndex">
+          <view class='filter-list-item clearfix' data-index="4" bindtap="slotList">
             <text class="icon icon-icon icon-wx_target"></text>
             <text>只显示线索相关</text>
             <text class="icon icon-finish5" wx:if="{{4 == activeIndex}}"></text>
           </view>
-          <view class='filter-list-item clearfix' data-index="5" bindtap="showIndex">
+          <view class='filter-list-item clearfix' data-index="5" bindtap="slotList">
             <text class="icon icon-login"></text>
             <text>只看陌生人相关</text>
             <text class="icon icon-finish5" wx:if="{{5 == activeIndex}}"></text>

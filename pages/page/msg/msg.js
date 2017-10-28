@@ -46,7 +46,7 @@ Page({
       url:'',
       method:'POST',
       data:{
-        activeIndex:activeIndex,
+        activeIndex:this.data.activeIndex,
       },
       success:function(res){
 

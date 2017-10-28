@@ -49,18 +49,24 @@
     <view class="filter-menu-container">
       <view class='filter-list'>
         <view class="filter-list-group">
-          <view class='filter-list-item clearfix'>
-            <text class="icon icon-wx_target"></text>
-            <text>新建联系人</text>
-          </view>
-          <view class='filter-list-item clearfix'>
-            <text class="icon icon-wx_id_card"></text>
-            <text>扫描名片</text>
-          </view>
-          <view class='filter-list-item clearfix'>
-            <text class="icon icon-wx_scan"></text>
-            <text>扫描相册内名片</text>
-          </view>
+          <navigator url="../idCard/new_contact/new_contact" open-type="navigate">
+            <view class='filter-list-item clearfix'>
+              <text class="icon icon-wx_add_contact"></text>
+              <text>新建联系人</text>
+            </view>
+          </navigator>
+          <navigator url="../idCard/new_contact/new_contact" open-type="navigate">
+            <view class='filter-list-item clearfix'>
+              <text class="icon icon-wx_id_card"></text>
+              <text>扫描名片</text>
+            </view>
+          </navigator>
+          <navigator url="new_contact/new_contact" open-type="navigate">
+            <view class='filter-list-item clearfix'>
+              <text class="icon icon-wx_scan"></text>
+              <text>扫描相册内名片</text>
+            </view>
+          </navigator>
         </view>
         <view class="filter-list-group">
           <view class='filter-list-item clearfix'>

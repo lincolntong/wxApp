@@ -9,7 +9,7 @@
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
 	"appid": "wx960d6188bacae5a9",
-	"projectname": "sbsp_wxapp",
+	"projectname": "wxApp",
 	"condition": {
 		"weapp": {
 			"current": -1,
