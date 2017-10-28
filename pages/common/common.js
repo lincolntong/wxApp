@@ -29,7 +29,7 @@ function touchM(e,that) {
     //rightLeave 为右侧按钮区域的宽度
     var toLeftWidth = app.globalData.windWidth - app.globalData.rightLeave;
     var txtStyle = "";
-      if (disX < 0) {//移动距离大于0，文本层left值等于手指移动距离
+      if (disX < 0 && !app.globalData.filterShow) {//移动距离大于0，文本层left值等于手指移动距离
       txtStyle = "transform: translateX(" + (-disX) + "px)";
         if (-disX >= toLeftWidth) {
           //控制手指移动距离最大值
@@ -41,7 +41,9 @@ function touchM(e,that) {
         else{
           txtStyle = "transform: translateX(0)"
         }
-    }
+    }else{
+      return false
+      }
     //获取手指触摸的是哪一个item
     var index = e.currentTarget.dataset.index;
     var list = that.data.addressList;
@@ -68,14 +70,15 @@ function touchE(e,that) {
     var txtStyle;
     if(-disX > rightLeave){
       txtStyle = "transform: translateX(" + toLeftWidth + "px);overflow-y:hidden;"
-    }else{
+    }else {
       txtStyle = "transform: translateX(0);";
     }
     if(app.globalData.filterShow){
-      txtStyle = "transform: translateX(0);overflow-y:auto;";
-      app.globalData.filterShow=false;
+      app.globalData.filterShow = false;
+      app.globalData.ThetxtStyle = "transform: translateX(0);overflow-y:auto;";
       that.setData({
-        filterShow:false
+        filterShow:false,
+        ThetxtStyle: "transform: translateX(0);overflow-y:auto;"
       })
     }
     //获取手指触摸的是哪一项

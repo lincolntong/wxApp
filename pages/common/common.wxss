@@ -947,6 +947,7 @@ button.label[type="default"] {
 }
 .img-content-list-container .img-content-list-content {
   margin-right: 30rpx;
+  overflow: hidden;
 }
 .img-content-list-container .img-content-list-maintext {
   font-size: 34rpx;
